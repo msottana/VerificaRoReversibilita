@@ -81,7 +81,7 @@ public class VerificaRoReversibilita {
         double[][] p;
         int ro[];
         BufferedReader in = new BufferedReader(new FileReader("cateneRoReversibili.txt"));
-        BufferedWriter out = new BufferedWriter(new FileWriter("output.txt"));
+        BufferedWriter out = new BufferedWriter(new FileWriter("outputRoReversibili.txt"));
         int numeroCatene = Integer.valueOf(in.readLine());//leggo il primo valore che rappresenta il numero di catene
         int n = Integer.valueOf(in.readLine());//leggo il secondo valore che rappresenta il numero di nodi (tutte le cstene hanno lo stesso numero di nodi)
         boolean risultato;
