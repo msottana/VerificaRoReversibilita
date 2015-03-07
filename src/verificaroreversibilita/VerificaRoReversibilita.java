@@ -42,7 +42,8 @@ public class VerificaRoReversibilita {
             if (p[rho[v]][rho[u]] == 0) {
                 bool = false;
             } else {
-                if (color[v] != WHITE && (int) (x[u] * p[u][v] * 1000000000) != (int) (x[v] * p[rho[v]][rho[u]] * 1000000000)) {
+                //We use an aproximation to reduce the precision of the calculations
+                if (color[v] != WHITE && (x[u] * p[u][v]) - (x[v] * p[rho[v]][rho[u]]) > 0.0000000001) {
                     bool = false;
                 }
                 if (color[v] == WHITE) {
